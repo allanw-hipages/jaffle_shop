@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: dbt_training
+    catalog: lakehouse_development
+    description: E-commerce data for the Jaffle Shop
+    tables:
+      - name: jaffle_shop_customers
+        description: One record per person who has purchased one or more items
+      - name: jaffle_shop_orders
+        description: Orders
+      - name: stripe_payments
+        description: Payments
