@@ -13,10 +13,11 @@ renamed as (
     select
         id as payment_id,
         orderid,
-        paymentmethod,
+        paymentmethod as payment_method,
 
         -- `amount` is currently stored in cents, so we convert it to dollars
         amount / 100 as amount
+        -- {{ cents_to_dollars('amount') }} as amount
 
     from source
 
